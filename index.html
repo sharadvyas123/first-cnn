@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIFAR-10 Model</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">IMAGE CLASSFIER</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#model">MODEL</a></li>
+                <li><a href="#predict">Predict</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section active">
+            <div class="container">
+                <h1>Welcome to IMAGE CLASSFIER</h1>
+                <div class="profile-container">
+                    <div class="profile-image">
+                        <img src="image.png" alt="Profile Image">
+                    </div>
+                    <div class="profile-content">
+                        <h2>About Me</h2>
+                        <p>Hello! I'm SHARAD VYAS . A  machine learning enthusiast working on image classification using the CIFAR-10 dataset. This project demonstrates my skills in deep learning and computer vision.</p>
+                        <p>I've built a convolutional neural network (CNN) model that can classify images into 10 different categories with high accuracy.</p>
+                        <div class="social-links">
+                            <a href="https://github.com/sharadvyas123"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/sharad-vyas-270310324/"><i class="fab fa-linkedin"></i></a>
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h1>About the Model</h1>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="ai_image.png" alt="Model Architecture">
+                    </div>
+                    <div class="about-text">
+                        <h2>CIFAR-10 Classification Model</h2>
+                        <p>This model is trained on the CIFAR-10 dataset, which consists of 60,000 32x32 color images in 10 classes, with 6,000 images per class. The dataset is divided into 50,000 training images and 10,000 testing images.</p>
+                        <p><strong>Important Note:</strong> For best results, please only upload images that belong to one of the CIFAR-10 categories (airplane, automobile, bird, cat, deer, dog, frog, horse, ship, or truck). The image should contain only one main subject - images with multiple objects may not be classified correctly.</p>
+                        <p>The model uses a Convolutional Neural Network (CNN) architecture specifically designed for image classification tasks. It has been trained to recognize these 10 distinct categories with high accuracy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="model" class="section">
+            <div class="container">
+                <h1>MODEL</h1>
+                <div class="model-content">
+                    <div class="model-info">
+                        <h2>Model Architecture</h2>
+                        <p>This section will contain detailed information about your model architecture, hyperparameters, and training process.</p>
+                        
+                        <div class="model-stats">
+                            <div class="stat-card">
+                                <h3>Accuracy</h3>
+                                <p class="stat-value">80.42%</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3>Parameters</h3>
+                                <p class="stat-value" id="paramCount">Loading...</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3>Training Time</h3>
+                                <p class="stat-value">50 minitues</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Performance Metrics</h3>
+                        <div class="metrics-container">
+                            <canvas id="accuracyChart"></canvas>
+                        </div>
+                        
+                        <h3>Class Distribution</h3>
+                        <div class="metrics-container">
+                            <canvas id="classDistribution"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="predict" class="section">
+            <div class="container">
+                <h1>Image Prediction</h1>
+                <div class="prediction-content">
+                    <div class="upload-container">
+                        <div class="upload-area" id="dropZone">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <h3>Drag & Drop Image Here</h3>
+                            <p>or</p>
+                            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                            <button class="upload-btn button" onclick="document.getElementById('imageInput').click()">Choose File</button>
+                        </div>
+                        <div class="preview-container" id="previewContainer" style="display: none;">
+                            <img id="previewImage" src="" alt="Preview">
+                            <button class="predict-btn" id="predictBtn">Predict</button>
+                        </div>
+                        <div class="result-container" id="resultContainer" style="display: none;">
+                            <h3>Prediction Result:</h3>
+                            <p id="predictionResult"></p>
+                            <div class="confidence-meter">
+                                <div class="confidence-bar" id="confidenceBar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CIFAR-10 Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
