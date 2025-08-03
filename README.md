@@ -1,104 +1,125 @@
-# first-cnn
-A web-based application that demonstrates image classification using a Convolutional Neural Network (CNN) trained on the CIFAR-10 dataset.
+# 🧠 first-cnn
 
-## Overview
+A web-based application for image classification using a Convolutional Neural Network (CNN) trained on the CIFAR-10 dataset.
 
-This project provides an interactive web interface for classifying images into 10 different categories using a pre-trained CNN model. The model has been trained on the CIFAR-10 dataset and achieves an accuracy of 80.42%.
+---
 
-## Features
+## 🌟 Overview
 
-- Interactive web interface for image classification
-- Real-time image prediction
-- Drag and drop image upload
-- Visual confidence meter for predictions
-- Performance metrics visualization
-- Responsive design for all devices
+This project features an interactive web interface that allows users to classify uploaded images into 10 categories using a pre-trained CNN model. The model was trained on the CIFAR-10 dataset and achieves over 80% accuracy.
 
-## Supported Image Categories
+---
 
-The model can classify images into the following 10 categories:
-- Airplane
-- Automobile
-- Bird
-- Cat
-- Deer
-- Dog
-- Frog
-- Horse
-- Ship
-- Truck
+## 🚀 Features
 
-## Getting Started
+- **Interactive web interface** for real-time image classification  
+- **Drag-and-drop** or manual image upload  
+- **Confidence meter** visualizing prediction certainty  
+- **Performance metrics and charts**  
+- **Fully responsive design**
+
+---
+
+## 🏷️ Supported Categories
+
+The model can recognize the following 10 classes:
+
+- ✈️ Airplane
+- 🚗 Automobile
+- 🐦 Bird
+- 🐱 Cat
+- 🦌 Deer
+- 🐶 Dog
+- 🐸 Frog
+- 🐴 Horse
+- 🚢 Ship
+- 🚚 Truck
+
+---
+
+## ⚡ Getting Started
 
 ### Prerequisites
 
-- A modern web browser (Chrome, Firefox, Safari, or Edge)
-- Basic understanding of image classification concepts
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- (Optional) Python/JS experience for local development
 
 ### Installation
 
-1. Clone this repository:
 ```bash
-git clone [your-repository-url]
+git clone https://github.com/sharadvyas123/first-cnn.git
+cd first-cnn
 ```
 
-2. Navigate to the project directory:
+Open `index.html` directly in your browser, **or** serve with a local HTTP server:
 ```bash
-cd cifar-10
+python -m http.server
+```
+Visit [http://localhost:8000](http://localhost:8000) in your browser.
+
+---
+
+## 🕹️ Usage
+
+1. Open the web app in your browser.
+2. Go to the **Predict** section.
+3. Upload an image (drag-and-drop or choose file).
+4. Click **Predict** to classify the image.
+5. View the predicted class and confidence score.
+
+---
+
+## ⚠️ Important Notes
+
+- For best results, use images with a single, clear subject belonging to one of the 10 categories.
+- Blurry, dark, or multi-object images may reduce accuracy.
+- The model is optimized for CIFAR-10-like images.
+
+---
+
+## 🧑‍💻 Model Details
+
+- **Architecture:** Convolutional Neural Network (CNN)
+- **Dataset:** CIFAR-10 (60,000 images)
+- **Training time:** ~50 minutes
+- **Accuracy:** ~80.4%
+
+---
+
+## 📁 Project Structure
+
+```
+first-cnn/
+├── index.html         # Main HTML file
+├── styles.css         # App styling
+├── script.js          # JS for logic and prediction
+├── image.png          # Profile/sample image
+├── ai_image.png       # Model architecture diagram
 ```
 
-3. Open `index.html` in your web browser or set up a local server.
+---
 
-## Usage
+## 🤝 Contributing
 
-1. Open the web application in your browser
-2. Navigate to the "Predict" section
-3. Upload an image by either:
-   - Dragging and dropping an image onto the upload area
-   - Clicking "Choose File" to select an image from your device
-4. Click the "Predict" button to get the classification result
-5. View the prediction result and confidence level
+Contributions, issues, and feature requests are welcome! Please open an issue to discuss your idea.
 
-## Important Notes
+---
 
-- For best results, upload images that contain only one main subject
-- The image should belong to one of the 10 supported categories
-- Images with multiple objects may not be classified correctly
-- The model works best with clear, well-lit images
+## 📄 License
 
-## Model Details
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-- Architecture: Convolutional Neural Network (CNN)
-- Training Dataset: CIFAR-10 (60,000 images)
-- Training Time: 50 minutes
-- Accuracy: 80.42%
+---
 
-## Project Structure
+## 📬 Contact
 
-```
-cifar-10/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles
-├── script.js           # JavaScript functionality
-├── image.png          # Profile image
-└── ai_image.png       # Model architecture image
-```
+- **GitHub:** [sharadvyas123](https://github.com/sharadvyas123)
+- **LinkedIn:** [Sharad Vyas](https://www.linkedin.com/in/sharad-vyas-270310324/)
 
-## Contributing
+---
 
-Feel free to submit issues and enhancement requests!
+## 🙏 Acknowledgments
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contact
-
-- GitHub: [sharadvyas123](https://github.com/sharadvyas123)
-- LinkedIn: [Sharad Vyas](https://www.linkedin.com/in/sharad-vyas-270310324/)
-
-## Acknowledgments
-
-- CIFAR-10 dataset
-- Chart.js for visualization
-- Font Awesome for icons 
+- [CIFAR-10 dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
+- [Chart.js](https://www.chartjs.org/) for visualization
+- [Font Awesome](https://fontawesome.com/) for icons
